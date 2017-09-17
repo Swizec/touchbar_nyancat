@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "427F07F06C7CAF5BEF1B1F330B7BC4830A3DAA3B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "156B64B1EB492961344B06C5D34F5B22DD7ECD85" : 9223372036854775807,
+    "427F07F06C7CAF5BEF1B1F330B7BC4830A3DAA3B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "671EDA2A-23BB-4AA0-AECC-5D634C31E743",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "156B64B1EB492961344B06C5D34F5B22DD7ECD85" : "",
+    "427F07F06C7CAF5BEF1B1F330B7BC4830A3DAA3B" : "touchbar_nyancat\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "touchbar_nyancat",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "touchbar_nyancat.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Swizec\/livecoding-project.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "156B64B1EB492961344B06C5D34F5B22DD7ECD85"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Swizec\/touchbar_nyancat.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "427F07F06C7CAF5BEF1B1F330B7BC4830A3DAA3B"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ class NyanCatCanvas: NSImageView {
 
     var xPosition: CGFloat = -680 {
         didSet {
-            self.frame = CGRect(x: xPosition, y: 0, width: 680, height: 30)
+            self.frame = CGRect(x: xPosition, y: 10, width: 680, height: 30)
         }
     }
 
@@ -35,7 +35,7 @@ class NyanCatCanvas: NSImageView {
         }
         
         self.canDrawSubviewsIntoLayer = true
-        self.frame = CGRect(x: xPosition, y: 0, width: 680, height: 30)
+        self.frame = CGRect(x: xPosition, y: 10, width: 680, height: 30)
     }
     
     override func touchesBegan(with event: NSEvent) {
