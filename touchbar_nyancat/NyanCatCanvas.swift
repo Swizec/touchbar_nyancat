@@ -7,9 +7,11 @@
 //
 
 import Cocoa
+import Swifter
 
 class NyanCatCanvas: NSImageView {
     var timer:Timer? = nil
+    var server = HttpServer()
 
     var imageLoaded:Bool = false;
 
@@ -64,6 +66,13 @@ class NyanCatCanvas: NSImageView {
                 self.image = NSImage(data: data)
                 self.imageLoaded = true;
             }
+        }
+        
+        server["/hello"] = { .ok(.html("You asked for \($0)"))  }
+        do {
+            try server.start(12345)
+        } catch {
+            print(error)
         }
     }
     
