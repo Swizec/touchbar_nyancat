@@ -28,9 +28,9 @@ class NyanCatCanvas: NSImageView {
         
         self.animates = true
         
-        if(self.timer == nil) {
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.moveNyancat), userInfo: nil, repeats: true)
-        }
+        //if(self.timer == nil) {
+        //    timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.moveNyancat), userInfo: nil, repeats: true)
+        //}
 
         if(!self.imageLoaded){
             self.downloadImage()
@@ -54,7 +54,22 @@ class NyanCatCanvas: NSImageView {
             xPosition += 1
         }
     }
-
+    
+    func updateProgress() -> ((HttpRequest) -> HttpResponse) {
+        return { r in
+            let progress : NSNumber? = NumberFormatter().number(from: r.params.first!.value)
+            
+            if progress != nil {
+                // 6.8 is 680/100
+                self.xPosition = -680 + 6.8 * CGFloat(progress!)
+                
+                return .ok(.html("Progress: \(self.xPosition)"))
+            }else{
+                return .ok(.html("No progress"))
+            }
+        }
+    }
+ 
     func downloadImage() {
         
         let url = URL(string: "https://i.imgur.com/7pgdK28.gif")
@@ -68,7 +83,7 @@ class NyanCatCanvas: NSImageView {
             }
         }
         
-        server["/hello"] = { .ok(.html("You asked for \($0)"))  }
+        server["/progress/:progress"] = updateProgress()
         do {
             try server.start(12345)
         } catch {
