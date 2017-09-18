@@ -5,7 +5,7 @@ Stupid Nyan Cat animation to show Webpack build progress on your +$2k MacBook Pr
 
 [Video 📼](https://twitter.com/Swizec/status/909565004642316288)
 
-[Download ⬇️]()
+[Download ⬇️](https://github.com/Swizec/touchbar_webpack_progress/raw/master/touchbar_webpack_progress.zip)
 
 
 ![](http://i.imgur.com/mHYg4vE.jpeg)
