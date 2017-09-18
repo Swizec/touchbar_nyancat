@@ -10,6 +10,47 @@ Stupid Nyan Cat animation to show Webpack build progress on your +$2k MacBook Pr
 
 ![](http://i.imgur.com/mHYg4vE.jpeg)
 
+## Here's how you set it up
+
+You can start using it right now. All you need is an expensive laptop, my [Touchbar Nyancat Wordpress Progress app](https://github.com/Swizec/touchbar_webpack_progress), and my fork of [nyan-progress-webpack-plugin](https://github.com/Swizec/nyan-progress-webpack-plugin/tree/send-progress-to-touchbar). Both are on Github.
+
+**1. ** Download the app, run it. Set it up to run at startup, if you want to be fancy.
+
+**2. ** Add my nyan-progress-webpack-plugin to your `package.json`. I'll try to convince @alexcuz to merge it into his published package. When that happens, this step will be easier.
+
+```
+// package.json
+"dependencies" {
+	// ...
+	"nyan-progress-webpack-plugin": "git://github.com/Swizec/nyan-progress-webpack-plugin#send-progress-to-touchbar",
+}
+```
+
+Then run installation:
+
+```
+$ npm install
+```
+
+Now you have my progress indicator. It can talk to your Touchbar when the app from step 1 is running.
+
+**3. ** Update your Webpack config.
+
+```javascript
+// webpack.config.js
+
+plugins: [
+	// ...
+	new require('nyan-progress-webpack-plugin')({
+		sendProgressToTouchbar: true
+	})
+]
+```
+
+This enables a Nyan Cat webpack progress indicator in your terminal and tells it to send progress to the touchbar.
+
+**4. ** Voila, enjoy your Touchbar Progress indicator. 
+
 
 ## Other awesome TouchBar apps
 
