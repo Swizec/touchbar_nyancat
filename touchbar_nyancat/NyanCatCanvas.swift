@@ -97,20 +97,4 @@ class NyanCatCanvas: NSImageView {
             completion(data, response, error)
             }.resume()
     }
-    
-
-    
-    override func touchesMoved(with event: NSEvent) {
-        if #available(OSX 10.12.2, *) {
-            let current = event.allTouches().first?.location(in: self).x ?? 0
-            let previous = event.allTouches().first?.previousLocation(in: self).x ?? 0
-        
-            let dX = (current - previous)
-            
-            xPosition += dX
-        } else {
-            // Fallback on earlier versions
-        }
-    }
-    
 }
